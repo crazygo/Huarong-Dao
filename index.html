@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>华容道 (Huarong Dao)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>华容道 (Huarong Dao)</h1>
+    <div class="game-container">
+        <div class="container">
+            <div class="board" id="board">
+                <div class="exit"></div>
+                <div id="instructions" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0,0,0,0.8); color: white; padding: 20px; border-radius: 10px; z-index: 100; text-align: center; display: none;">
+                    <h3>游戏操作说明</h3>
+                    <p>1. 点击一个棋子选中它（会高亮显示）</p>
+                    <p>2. 然后点击你想要移动的方向（上下左右）</p>
+                    <p>3. 棋子只能移动到空白处</p>
+                    <p>4. 目标是将曹操（红色大方块）移到底部出口</p>
+                    <button id="startGame" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">开始游戏</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ai-panel">
+            <h3>AI 辅助分析</h3>
+            <div>
+                <p>当前状态分析:</p>
+                <div class="ai-suggestion">
+                    <div id="aiThinking" class="thinking">
+                        <div class="thinking-dot"></div>
+                        <div class="thinking-dot"></div>
+                        <div class="thinking-dot"></div>
+                        <span>AI 正在分析...</span>
+                    </div>
+                    <div id="aiMoves" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="move-history">
+                <h4 style="margin-top: 0;">移动历史</h4>
+                <div id="moveHistory"></div>
+            </div>
+            <div class="ai-controls">
+                <button id="getHintBtn">获取提示</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="moves">Moves: <span id="moveCounter">0</span></div>
+    <div class="controls">
+        <button id="resetBtn">Reset</button>
+        <button id="hintBtn">Hint</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/blocks.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

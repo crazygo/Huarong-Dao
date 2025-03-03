@@ -1,0 +1,23 @@
+# 依赖库
+/node_modules
+/.pnp
+.pnp.js
+
+# IDE 文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
+.env.local
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
