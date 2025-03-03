@@ -4,7 +4,8 @@
   "description": "华容道 (Huarong Dao) puzzle game with AI solver",
   "main": "index.html",
   "scripts": {
-    "start": "serve ."
+    "start": "serve .",
+    "vercel-build": "echo 'Build step complete'"
   },
   "dependencies": {
     "serve": "^14.0.0"
